@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2rem 2.5rem;
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #6a89cc;
+}
+
+h1 {
+    margin: 0.5rem 0 0.75rem 0;
+    color: #2d3436;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#bio {
+    color: #636e72;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.links {
+    margin-bottom: 1.5rem;
+}
+
+.links a {
+    color: #6a89cc;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.links a:hover {
+    color: #3867d6;
+}
+
+#colorBtn {
+    background: #6a89cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#colorBtn:hover {
+    background: #3867d6;
+}
+
+@media (max-width: 500px) {
+    .profile-card {
+        padding: 1rem;
+        max-width: 95vw;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    #bio {
+        font-size: 0.95rem;
+    }
+}
