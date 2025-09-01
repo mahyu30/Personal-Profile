@@ -65,6 +65,13 @@ h1 {
     transition: color 0.2s;
 }
 
+#Portfolio {
+    background: #6a89cc;
+    color: #fff;
+    border: 5px solid #6a89cc;
+    border-radius: 5px;
+}
+
 #colorBtn {
     background: #6a89cc;
     color: #fff;
@@ -74,6 +81,8 @@ h1 {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.2s;
+    margin-top: 1rem;
+    
 }
 
 #colorBtn:hover {
