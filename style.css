@@ -59,6 +59,12 @@ h1 {
     color: #3867d6;
 }
 
+.fa-github, .fa-linkedin, .fa-facebook {
+    font-size: 3rem;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+}
+
 #colorBtn {
     background: #6a89cc;
     color: #fff;
