@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const bio = document.getElementById("bio");
     const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
     const projectsSection = document.querySelector('.projects-section');
+    const profileCard = document.querySelector('.profile-card');
 
     colorBtn.addEventListener("click", function() {
         // Change bio color
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     toggleProjectsBtn.addEventListener("click", function() {
-        projectsSection.classList.toggle("hide");
+        profileCard.classList.toggle("slide-left");
+        projectsSection.classList.toggle("fade-in");
     });
 });
