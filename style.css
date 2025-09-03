@@ -94,7 +94,7 @@ body {
 /* Add more delays for more items */
 
 #toggleProjectsBtn {
-    background: #3867d6;
+    background: #6a89cc;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -107,7 +107,7 @@ body {
 }
 
 #toggleProjectsBtn:hover {
-    background: #6a89cc;
+    background: #3867d6;
 }
 
 .projects-section h2 {
