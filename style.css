@@ -93,7 +93,7 @@ body {
 .projects-section.fade-in .project-list > li:nth-child(3) { transition-delay: 0.8s; }
 /* Add more delays for more items */
 
-#toggleProjectsBtn {
+#toggleAboutBtn {
     background: #6a89cc;
     color: #fff;
     border: none;
@@ -224,8 +224,95 @@ h1 {
     background: #3867d6;
 }
 
+.about-section {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2rem 2.5rem;
+    max-width: 400px;
+    width: 100%;
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: calc(50% + 180px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-60px);
+    transition:
+        opacity 0.7s cubic-bezier(0.77,0,0.175,1) 0.1s,
+        transform 0.7s cubic-bezier(0.77,0,0.175,1) 0.1s;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.about-section.fade-in {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) translateX(0);
+}
+
+.about-section h2 {
+    margin-top: 0;
+    color: #2d3436;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.about-intro {
+    color: #636e72;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.about-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #6a89cc;
+    align-self: center;
+}
+
+.about-subsection {
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+
+.about-subsection h3 {
+    color: #3867d6;
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tech-list {
+    list-style: disc inside;
+    padding-left: 0.5rem;
+    margin: 0;
+}
+
+.tech-list li {
+    color: #636e72;
+    font-size: 0.98rem;
+    margin-bottom: 0.3rem;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    border-radius: 5px;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.tech-list li:hover {
+    background: #e0eafc;
+    color: #3867d6;
+    transform: scale(1.05);
+}
+
 @media (max-width: 1300px) {
-    .profile-card, .projects-section {
+    .profile-card, .projects-section, .about-section {
         position: static;
         left: auto;
         top: auto;
@@ -251,6 +338,19 @@ h1 {
         pointer-events: auto;
         transform: translateY(0);
     }
+    .about-section {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(40px);
+        transition:
+            opacity 0.7s cubic-bezier(0.77,0,0.175,1) 0.1s,
+            transform 0.7s cubic-bezier(0.77,0,0.175,1) 0.1s;
+    }
+    .about-section.fade-in {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
     .main-container {
         flex-direction: column;
         align-items: center;
@@ -265,6 +365,10 @@ h1 {
         max-width: 95vw;
     }
     .projects-section {
+        padding: 1rem;
+        max-width: 95vw;
+    }
+    .about-section {
         padding: 1rem;
         max-width: 95vw;
     }
