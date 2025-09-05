@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const colorBtn = document.getElementById("colorBtn");
     const bio = document.getElementById("bio");
-    const toggleProjectsBtn = document.getElementById("toggleAboutBtn");
-    const aboutSection = document.querySelector('.about-section');
+    const toggleProjectsBtn = document.getElementById("toggleSkillsBtn");
+    const skillsSection = document.querySelector('.skills-section');
     const profileCard = document.querySelector('.profile-card');
 
     colorBtn.addEventListener("click", function() {
@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     toggleProjectsBtn.addEventListener("click", function() {
         profileCard.classList.toggle("slide-left");
-        aboutSection.classList.toggle("fade-in");
+        skillsSection.classList.toggle("fade-in");
     });
 });

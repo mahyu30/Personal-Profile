@@ -48,7 +48,7 @@ body {
     border: 4px solid #6a89cc;
 }
 
-#toggleAboutBtn {
+#toggleSkillsBtn {
     background: #6a89cc;
     color: #fff;
     border: none;
@@ -61,7 +61,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-#toggleAboutBtn:hover {
+#toggleSkillsBtn:hover {
     background: #3867d6;
 }
 
@@ -124,7 +124,7 @@ h1 {
     background: #3867d6;
 }
 
-.about-section {
+.skills-section {
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -147,13 +147,13 @@ h1 {
     pointer-events: none;
 }
 
-.about-section.fade-in {
+.skills-section.fade-in {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(-50%) translateX(0);
 }
 
-.about-section h2 {
+.skills-section h2 {
     margin-top: 0;
     color: #2d3436;
     font-size: 1.5rem;
@@ -161,13 +161,13 @@ h1 {
     margin-bottom: 1.2rem;
 }
 
-.about-intro {
+.skills-intro {
     color: #636e72;
     font-size: 1rem;
     margin-bottom: 1.2rem;
 }
 
-.about-pic {
+.skills-pic {
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -177,12 +177,12 @@ h1 {
     align-self: center;
 }
 
-.about-subsection {
+.skills-subsection {
     margin-bottom: 1.2rem;
     width: 100%;
 }
 
-.about-subsection h3 {
+.skills-subsection h3 {
     color: #3867d6;
     font-size: 1.08rem;
     font-weight: 600;
@@ -190,12 +190,18 @@ h1 {
 }
 
 .tech-list {
-    list-style: disc inside;
-    padding-left: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 8px 32px; /* Adjust spacing as needed */
+    list-style-type: none;
+    padding: 0;
     margin: 0;
 }
 
 .tech-list li {
+    /* Optional: add left padding for arrow style */
+    position: relative;
+    padding-left: 30px;
     color: #636e72;
     font-size: 0.98rem;
     margin-bottom: 0.3rem;
@@ -205,6 +211,14 @@ h1 {
     cursor: pointer;
 }
 
+.tech-list li::before {
+    content: '\25B6'; /* Unicode for a small right-pointing triangle */
+    position: absolute;
+    left: -10px;
+    color: #2d3436; /* Example color, adjust as needed */
+    font-size: 0.9em;
+}
+
 .tech-list li:hover {
     background: #e0eafc;
     color: #3867d6;
@@ -212,7 +226,7 @@ h1 {
 }
 
 @media (max-width: 1300px) {
-    .profile-card, .projects-section, .about-section {
+    .profile-card, .projects-section, .skills-section {
         position: static;
         left: auto;
         top: auto;
@@ -238,7 +252,7 @@ h1 {
         pointer-events: auto;
         transform: translateY(0);
     }
-    .about-section {
+    .skills-section {
         opacity: 0;
         pointer-events: none;
         transform: translateY(40px);
@@ -246,7 +260,7 @@ h1 {
             opacity 0.7s cubic-bezier(0.77,0,0.175,1) 0.1s,
             transform 0.7s cubic-bezier(0.77,0,0.175,1) 0.1s;
     }
-    .about-section.fade-in {
+    .skills-section.fade-in {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
@@ -268,7 +282,7 @@ h1 {
         padding: 1rem;
         max-width: 95vw;
     }
-    .about-section {
+    .skills-section {
         padding: 1rem;
         max-width: 95vw;
     }
