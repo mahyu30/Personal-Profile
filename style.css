@@ -316,7 +316,7 @@ h1 {
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     max-width: 420px;
-    margin: 2rem auto 2rem auto;
+    margin: 100vh auto 2rem auto;
     padding: 2rem 2.5rem;
 }
 .contact-section h2 {
@@ -525,6 +525,9 @@ body.dark-mode .greeting {
         align-items: center;
         gap: 1.5rem;
         padding-top: 2vh;
+    }
+    .contact-section {
+        margin: 2rem auto 2rem auto;
     }
 }
 
