@@ -9,6 +9,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <meta
+      name="description"
+      content="Cloyd Matthew Arabe - Information Technology Student & Developer Portfolio"
+    />
+    <meta
+      name="keywords"
+      content="developer, IT student, web development, JavaScript, PHP, Java"
+    />
+    <meta name="author" content="Cloyd Matthew Arabe" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <!-- Greeting Modal -->
@@ -25,12 +36,25 @@
             Welcome to my personal portfolio! I'm excited to share my journey
             and projects with you.
           </p>
+          <div class="modal-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="10">0</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
           <div class="modal-icon">
             <i class="fa-solid fa-hand-wave"></i>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <nav class="navbar">
       <div class="nav-brand">Cloyd Matthew Arabe</div>
@@ -40,9 +64,18 @@
         <span class="bar"></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#profile" class="nav-link">Profile</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </nav>
     <div class="main-container">
@@ -144,16 +177,27 @@
               >
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://github.com/kloydmatyo/GC-Pulse" target="_blank" class="project-link">
+              <a
+                href="https://github.com/kloydmatyo/GC-Pulse"
+                target="_blank"
+                class="project-link"
+              >
                 <i class="fa-solid fa-external-link"></i>
               </a>
             </div>
           </div>
-          <img src="img/gc_pulse.png" alt="Portfolio project placeholder" class="project-image" loading="lazy" />
+          <img
+            src="img/gc_pulse.png"
+            alt="Portfolio project placeholder"
+            class="project-image"
+            loading="lazy"
+          />
           <p class="project-description">
-            A comprehensive web-based platform that revolutionizes organizational communication by enabling seamless creation, 
-            management, and sharing of announcements, events, and updates. Features include appointment scheduling with OSWS 
-            for paperwork submission, user role management, and real-time notifications.
+            A comprehensive web-based platform that revolutionizes
+            organizational communication by enabling seamless creation,
+            management, and sharing of announcements, events, and updates.
+            Features include appointment scheduling with OSWS for paperwork
+            submission, user role management, and real-time notifications.
           </p>
           <div class="project-tech">
             <span class="tech-tag">PHP</span>
@@ -175,16 +219,27 @@
               >
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://github.com/Swif7ify/OCPL-Barcode" target="_blank" class="project-link">
+              <a
+                href="https://github.com/Swif7ify/OCPL-Barcode"
+                target="_blank"
+                class="project-link"
+              >
                 <i class="fa-solid fa-external-link"></i>
               </a>
             </div>
           </div>
-          <img src="img/ocpl.png" alt="Task app project placeholder" class="project-image" loading="lazy" />
+          <img
+            src="img/ocpl.png"
+            alt="Task app project placeholder"
+            class="project-image"
+            loading="lazy"
+          />
           <p class="project-description">
-            A high-performance desktop application that modernizes attendance tracking for Olongapo City Public Library. 
-            Built with Electron for cross-platform compatibility, featuring barcode scanning, real-time data synchronization 
-            with Supabase, and comprehensive reporting dashboard.
+            A high-performance desktop application that modernizes attendance
+            tracking for Olongapo City Public Library. Built with Electron for
+            cross-platform compatibility, featuring barcode scanning, real-time
+            data synchronization with Supabase, and comprehensive reporting
+            dashboard.
           </p>
           <div class="project-tech">
             <span class="tech-tag">Electron</span>
@@ -200,23 +255,30 @@
           <div class="project-header">
             <h3 class="project-title">PYVA Prime Number Calculator</h3>
             <div class="project-links">
+              <a href="" target="_blank" class="project-link">
+                <i class="fa-brands fa-github"></i>
+              </a>
               <a
-                href=""
+                href="https://github.com/kloydmatyo/Prime-Number-Calculator"
                 target="_blank"
                 class="project-link"
               >
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://github.com/kloydmatyo/Prime-Number-Calculator" target="_blank" class="project-link">
                 <i class="fa-solid fa-external-link"></i>
               </a>
             </div>
           </div>
-          <img src="img/pyva.png" alt="E-Commerce project placeholder" class="project-image" loading="lazy" />
+          <img
+            src="img/pyva.png"
+            alt="E-Commerce project placeholder"
+            class="project-image"
+            loading="lazy"
+          />
           <p class="project-description">
-            An elegant Java application demonstrating advanced algorithm implementation with the Sieve of Eratosthenes for 
-            efficient prime number generation. Features input validation, performance optimization, and an intuitive JavaFX interface 
-            with real-time calculation progress.
+            An elegant Java application demonstrating advanced algorithm
+            implementation with the Sieve of Eratosthenes for efficient prime
+            number generation. Features input validation, performance
+            optimization, and an intuitive JavaFX interface with real-time
+            calculation progress.
           </p>
           <div class="project-tech">
             <span class="tech-tag">Java</span>
@@ -264,6 +326,11 @@
         <div id="formSuccess" class="form-success"></div>
       </form>
     </section>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
     <script src="script.js"></script>
   </body>
 </html>
