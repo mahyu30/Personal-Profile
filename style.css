@@ -257,9 +257,28 @@ h1 {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+/* added: responsive neutral placeholder image for projects */
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 0 1rem 0;
+    background: linear-gradient(135deg, #eef4fb 0%, #f7fafc 100%);
+    display: block;
+}
+
+/* darker neutral background for dark mode */
+body.dark-mode .project-image {
+    background: linear-gradient(135deg, #39414f 0%, #2b3240 100%);
+}
+
+/* smaller heights on narrower viewports */
+@media (max-width: 900px) {
+    .project-image { height: 160px; }
+}
+@media (max-width: 500px) {
+    .project-image { height: 110px; }
 }
 
 .project-header {
